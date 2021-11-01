@@ -1,16 +1,32 @@
 const { ApolloServer, gql } = require("apollo-server");
 
+const books = [
+  {
+    title: 'The Awakening',
+    author: 'Kate Chopin',
+  },
+  {
+    title: 'City of Glass',
+    author: 'Paul Auster',
+  },
+];
+
 // Graphql schema
 const typeDefs = gql`
+ type Book{
+    title: String,
+    author: String
+ }
+
   type Query {
-    info: String!
+    books: [Book]
   }
 `;
 
 // implementation of the Graphql schema
 const resolvers = {
   Query: {
-    info: () => "This is the API for Hackernews clone",
+    books: () => books
   },
 };
 
