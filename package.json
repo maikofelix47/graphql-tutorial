@@ -4,7 +4,7 @@
   "description": "This is a NodeJs &amp; GrpahQl tutorial project",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.mjs"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,9 @@
   "homepage": "https://github.com/maikofelix47/hackernews-node#readme",
   "dependencies": {
     "apollo-server": "^3.4.0",
+    "apollo-server-core": "^3.4.0",
+    "apollo-server-express": "^3.4.0",
+    "express": "^4.17.1",
     "graphql": "^15.7.2"
   }
 }
