@@ -8,9 +8,6 @@ import { graphqlSchema } from './graphql/schema.mjs';
 import { graphQlResolvers } from './graphql/resolvers.mjs';
 
 
-
-const root = { hello: () => 'Hello world!' };
-
 const app = express();
 app.use('/graphql', graphqlHTTP({
   schema: graphqlSchema,
